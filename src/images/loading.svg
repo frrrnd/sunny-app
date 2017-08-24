@@ -1,0 +1,15 @@
+<svg height="240px" width="450px" x="0px" y="0px">
+	<defs>
+		<pattern height="1.1" id="water" width=".25" patternContentUnits="objectBoundingBox">
+			<path d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z" fill="#000"/>
+		</pattern>
+		<text id="text" fontFamily="'Cabin Condensed'" fontSize="161.047" transform="translate(2,116)">OCEAN</text>
+		<mask id="text-mask"/>
+		<g id="eff">
+			<rect className="water-fill" height="120" width="1200" fill="url(#water)" opacity="0.3" x="-300" y="50"/>
+			<rect className="water-fill" height="120" width="1600" fill="url(#water)" opacity="0.3" y="45"/>
+			<rect className="water-fill" height="120" width="800" fill="url(#water)" opacity="0.3" y="55"/>
+			<rect className="water-fill" height="120" width="2000" fill="url(#water)" opacity="0.3" y="55"/>
+		</g>
+	</defs>
+</svg>
