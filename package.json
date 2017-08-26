@@ -5,7 +5,7 @@
   "devDependencies": {
     "react-scripts": "1.0.11"
   },
-  "homepage": "https://frrrnd.github.io/sunny-app",
+  "homepage": "http://frrrnd.github.io/sunny-app",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "jquery": "^3.2.1",
