@@ -20,15 +20,14 @@ body {
 	font-family: 'Chivo', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #666;
-	/* background-image: url('../images/bg.svg');
-	background-position: center bottom;
-	background-repeat: no-repeat; */
-	background-color: black;
+	color: #9ebee7;
+	background-color: #010f26;
+	background: linear-gradient(to bottom, #010f26 0%,#598ab5 100%);
 }
 
 a {
 	text-decoration: none;
+	color: #9ebee7;
 }
 
 strong {

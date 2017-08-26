@@ -13,8 +13,7 @@ class App extends Component {
     let hour = new Date().getHours();
 
     if (hour >= 19 || hour <= 6) {
-      //se for noite
-      document.getElementsByTagName('body')[0].className = "theme-night";
+      document.getElementsByTagName('body')[0].className = "theme-day";
     } else {
       document.getElementsByTagName('body')[0].className = "theme-day";
     }

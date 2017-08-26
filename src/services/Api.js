@@ -17,8 +17,6 @@ class Api extends Component {
     }
   }
 
-  //hasGeolocation();
-
   // update weather
   getWeather () {
     if ( navigator && navigator.geolocation ) {
@@ -78,7 +76,7 @@ class Api extends Component {
       content =
         <div className='container-loading'>
             <span className="marker--pulse"></span>
-            <p>Ative a localização.</p>
+            <p>Enable location.</p>
         </div>
     }
 

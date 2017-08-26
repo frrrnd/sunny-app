@@ -5,6 +5,7 @@
   "devDependencies": {
     "react-scripts": "0.9.2"
   },
+  "homepage": "http://frrrnd.github.io/sunny-app",
   "dependencies": {
     "jquery": "^3.2.1",
     "react": "^15.4.2",
