@@ -3,19 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.2"
+    "react-scripts": "1.0.11"
   },
-  "homepage": "http://frrrnd.github.io/sunny-app",
+  "homepage": "https://frrrnd.github.io/sunny-app",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "jquery": "^3.2.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "svg-react-loader": "^0.4.4"
+    "react-dom": "^15.4.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "make": "react-scripts"
   }
 }
