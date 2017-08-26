@@ -17,6 +17,8 @@ class Api extends Component {
     }
   }
 
+  //hasGeolocation();
+
   // update weather
   getWeather () {
     if ( navigator && navigator.geolocation ) {
@@ -58,11 +60,12 @@ class Api extends Component {
             <section>
               <div>
                 <p>
-                  Today in <strong>{ this.state.data.name }</strong>, with { this.state.data.weather[ 0 ].description }, the temperature is around <strong className="gradient-txt">{ this.state.data.main.temp }º</strong>.
+                  Today in <strong>{ this.state.data.name }</strong>, with <strong>{ this.state.data.weather[ 0 ].description }</strong>, the temperature is around <strong className="gradient-txt">{ this.state.data.main.temp }º</strong>.
                 </p>
                 <p className='small'>
-                  <span className='additional-info'><strong>Wind speed:</strong> {this.state.data.wind.speed}m/s</span>
-                  <span className='additional-info'><strong>Humidity:</strong> {this.state.data.main.humidity}%</span>
+                  <span className='additional-info'>Wind speed: {this.state.data.wind.speed}m/s</span>
+                  <span className='additional-info'>Humidity: {this.state.data.main.humidity}%</span>
+                  <span className="poweredBy">powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></span>
                 </p>
               </div>
             </section>
@@ -75,6 +78,7 @@ class Api extends Component {
       content =
         <div className='container-loading'>
             <span className="marker--pulse"></span>
+            <p>Ative a localização.</p>
         </div>
     }
 

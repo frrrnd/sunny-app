@@ -20,7 +20,7 @@ body {
 	font-family: 'Chivo', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #333;
+	color: #666;
 	/* background-image: url('../images/bg.svg');
 	background-position: center bottom;
 	background-repeat: no-repeat; */
@@ -56,29 +56,5 @@ strong {
 @media screen and (max-width: 400px) {
 	.root {
 		padding: 10px;
-	}
-}
-
-.gradient-txt {
-	background: linear-gradient(to bottom, #ff7a32 -1%,#ffdd32 100%);
-	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-}
-
-.color-burn {
-	mix-blend-mode: color-burn;
-}
-
-.water-fill {
-	animation: wave 2.8s infinite;
-}
-
-@keyframes wave {
-	0% {
-		left: -500px;
-	}
-
-	0% {
-		left: 0;
 	}
 }
