@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import Main from '../components/Main.js'
 import $ from 'jquery'
 import Key from './key.json'
-// import Svg from '../images/loading.svg'
+import Header from '../components/Header';
 
 class Api extends Component {
   constructor ( props ) {
@@ -48,17 +48,29 @@ class Api extends Component {
   }
 
   render () {
-    const { fetched, loading, data } = this.state
+    const { fetched } = this.state
     let content
 
     if ( fetched ) {
+      let temperature = Math.round(this.state.data.main.temp)
+
+      const divStyle = {
+        backgroundImage: "url('https://source.unsplash.com/featured?"+ this.state.data.weather[0].description +"')",
+        width: "100%",
+        height: "100%",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover"
+      }
+
       content =
-        <main className='weather-results'>
+        <main style={divStyle}>
           { this.state.data ? (
-            <section>
+            <section  className='weather-results'>
+              <Header></Header>
               <div>
                 <p>
-                  Today in <strong>{ this.state.data.name }</strong>, with <strong>{ this.state.data.weather[ 0 ].description }</strong>, the temperature is around <strong className="gradient-txt">{ this.state.data.main.temp }º</strong>.
+                  Today in <strong>{ this.state.data.name }</strong>, with <strong>{ this.state.data.weather[ 0 ].description }</strong>, the temperature is around <strong className="gradient-txt">{ temperature }º</strong>.
                 </p>
                 <p className='small'>
                   <span className='additional-info'>Wind speed: {this.state.data.wind.speed}m/s</span>
@@ -80,7 +92,7 @@ class Api extends Component {
         </div>
     }
 
-    return <div>
+    return <div className="full">
              { content }
            </div>
   }

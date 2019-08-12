@@ -8,7 +8,7 @@
   "homepage": "http://frrrnd.github.io/sunny-app",
   "dependencies": {
     "gh-pages": "^1.0.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },

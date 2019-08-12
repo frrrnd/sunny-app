@@ -6,7 +6,8 @@
 .weather-results {
 	animation: fadeIn 1s 0.3s forwards;
   opacity: 0;
-  padding: 3em 0;
+  height: 100%;
+  background-color: rgba(0,0,0,.9)
 }
 
 .weather-results p {

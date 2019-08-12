@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Header';
 import Api from '../services/Api';
 import '../styles/App.css';
 
@@ -13,7 +12,7 @@ class App extends Component {
     let hour = new Date().getHours();
 
     if (hour >= 19 || hour <= 6) {
-      document.getElementsByTagName('body')[0].className = "theme-day";
+      document.getElementsByTagName('body')[0].className = "theme-night";
     } else {
       document.getElementsByTagName('body')[0].className = "theme-day";
     }
@@ -23,7 +22,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header></Header>
         <Api></Api>
       </div>
     );
