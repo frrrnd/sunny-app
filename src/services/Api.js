@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 // import Main from '../components/Main.js'
 import $ from 'jquery'
 import Key from './key.json'
-import Header from '../components/Header';
 
 class Api extends Component {
   constructor ( props ) {
@@ -27,7 +26,7 @@ class Api extends Component {
           loading: true
         } )
 
-        return $.getJSON( 'http://api.openweathermap.org/data/2.5/weather?lat=' + this.state.latitude + '&lon=' + this.state.longitude + '&appid=' + Key.data + '&units=metric' )
+        return $.getJSON( 'http://api.openweathermap.org/data/2.5/weather?lat=' + this.state.latitude + '&lon=' + this.state.longitude + '&appid=' + Key.data + '&units=metric&lang=pt_br')
           .then( ( data ) => {
             console.log( data )
             this.setState( {
@@ -54,8 +53,7 @@ class Api extends Component {
     if ( fetched ) {
       let temperature = Math.round(this.state.data.main.temp)
 
-      const divStyle = {
-        backgroundImage: "url('https://source.unsplash.com/featured?"+ this.state.data.weather[0].description +"')",
+    const divStyle = {
         width: "100%",
         height: "100%",
         backgroundRepeat: "no-repeat",
@@ -67,15 +65,13 @@ class Api extends Component {
         <main style={divStyle}>
           { this.state.data ? (
             <section  className='weather-results'>
-              <Header></Header>
               <div>
                 <p>
-                  Today in <strong>{ this.state.data.name }</strong>, with <strong>{ this.state.data.weather[ 0 ].description }</strong>, the temperature is around <strong className="gradient-txt">{ temperature }º</strong>.
+                  Hoje em <strong>{ this.state.data.name }</strong> com <strong>{ this.state.data.weather[ 0 ].description }</strong>, a temperatura está por volta de <strong className="gradient-txt">{ temperature }º</strong>.
                 </p>
                 <p className='small'>
-                  <span className='additional-info'>Wind speed: {this.state.data.wind.speed}m/s</span>
-                  <span className='additional-info'>Humidity: {this.state.data.main.humidity}%</span>
-                  <span className="poweredBy">powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></span>
+                  <span className='additional-info'>Velocidade  do vento: {this.state.data.wind.speed}m/s</span>
+                  <span className='additional-info'>Humidade: {this.state.data.main.humidity}%</span>
                 </p>
               </div>
             </section>

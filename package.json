@@ -7,10 +7,14 @@
   },
   "homepage": "http://frrrnd.github.io/sunny-app",
   "dependencies": {
+    "css.gg": "^2.0.0",
     "gh-pages": "^1.0.0",
     "jquery": "^3.4.1",
+    "node-sass": "^4.14.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "styled-components": "^5.1.1",
+    "tslib": "^2.0.1"
   },
   "scripts": {
     "predeploy": "npm run build",
