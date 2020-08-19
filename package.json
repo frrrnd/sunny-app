@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.11"
+    "react-scripts": "1.0.11",
+    "webpack": "^4.44.1"
   },
   "homepage": "http://frrrnd.github.io/sunny-app",
   "dependencies": {
