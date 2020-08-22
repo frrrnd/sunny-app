@@ -26,7 +26,7 @@ class Api extends Component {
           loading: true
         } )
 
-        return $.getJSON( 'http://api.openweathermap.org/data/2.5/weather?lat=' + this.state.latitude + '&lon=' + this.state.longitude + '&appid=' + Key.data + '&units=metric&lang=pt_br')
+        return $.getJSON( 'https://api.openweathermap.org/data/2.5/weather?lat=' + this.state.latitude + '&lon=' + this.state.longitude + '&appid=' + Key.data + '&units=metric&lang=pt_br')
           .then( ( data ) => {
             console.log( data )
             this.setState( {
